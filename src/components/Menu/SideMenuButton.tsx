@@ -9,7 +9,7 @@ const SideMenuButton = () => {
 
   return (
     <>
-      <button className="md:hidden" onClick={() => setOpened(!opened)}>
+      <button className="lg:hidden" onClick={() => setOpened(!opened)}>
         {opened ? <BiX /> : <BiMenu />}
       </button>
 
@@ -17,7 +17,7 @@ const SideMenuButton = () => {
         className={`fixed top-16 left-0 h-screen w-full p-4 bg-zinc-900 z-50 transition-all ${
           opened ? '' : '-translate-x-full'
         } `}>
-        <SideMenu />
+        <SideMenu handleClose={() => setOpened(false)} />
       </div>
     </>
   );
