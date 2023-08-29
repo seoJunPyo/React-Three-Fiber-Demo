@@ -20,7 +20,7 @@ const Cube = ({
 
   return (
     <>
-      <ambientLight intensity={0.2} />
+      <ambientLight intensity={0.1} />
       <directionalLight position={[1, 1, 1]} />
 
       <mesh ref={boxRef} position={position} scale={scale} rotation={degArrayToRadArray(rotation)}>

@@ -23,20 +23,20 @@ const Controller = ({
 }) => (
   <div key={axis} className="flex items-center space-x-2  justify-center">
     <span>{axis}</span>
-    <input className="w-72 md:w-52" type="range" min={min} max={max} step={step} value={value} onChange={onChange} />
+    <input className="w-72 lg:w-52" type="range" min={min} max={max} step={step} value={value} onChange={onChange} />
     <span className="w-4">{value}</span>
   </div>
 );
 
 const Example2 = () => {
   const [position, setPosition] = React.useState<{ x: number; y: number; z: number }>({ x: 0, y: 0, z: 0 });
-  const [scale, setScale] = React.useState<{ x: number; y: number; z: number }>({ x: 2.5, y: 2.5, z: 2.5 });
+  const [scale, setScale] = React.useState<{ x: number; y: number; z: number }>({ x: 3, y: 3, z: 3 });
   const [rotation, setRotation] = React.useState<{ x: number; y: number; z: number }>({ x: 0, y: 0, z: 0 });
 
   return (
     <>
-      <div className="md:flex h-48 md:h-96 items-center md:space-x-8">
-        <div className="md:w-2/3 h-full">
+      <div className="lg:flex h-48 lg:h-96 items-center lg:space-x-8">
+        <div className="lg:w-2/3 h-full">
           <Canvas>
             <Cube
               position={[position.x, position.y, position.z]}
