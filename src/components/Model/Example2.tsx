@@ -30,7 +30,7 @@ const Controller = ({
 
 const Example2 = () => {
   const [position, setPosition] = React.useState<{ x: number; y: number; z: number }>({ x: 0, y: 0, z: 0 });
-  const [scale, setScale] = React.useState<{ x: number; y: number; z: number }>({ x: 3, y: 3, z: 3 });
+  const [scale, setScale] = React.useState<{ x: number; y: number; z: number }>({ x: 1, y: 1, z: 1 });
   const [rotation, setRotation] = React.useState<{ x: number; y: number; z: number }>({ x: 0, y: 0, z: 0 });
 
   return (
@@ -42,6 +42,7 @@ const Example2 = () => {
               position={[position.x, position.y, position.z]}
               scale={[scale.x, scale.y, scale.z]}
               rotation={[rotation.x, rotation.y, rotation.z]}
+              withHelper
             />
           </Canvas>
         </div>
@@ -89,7 +90,7 @@ const Example2 = () => {
                 axis={axis}
                 min={0}
                 max={360}
-                step={45}
+                step={15}
                 value={rotation[axis]}
                 onChange={e => {
                   setRotation({ ...rotation, [axis]: Number(e.target.value) });

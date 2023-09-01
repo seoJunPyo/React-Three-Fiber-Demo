@@ -24,10 +24,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Link>
         </nav>
         <main className="container lg:flex lg:mt-12 mx-auto">
-          <div className="hidden lg:block">
+          <div className="hidden lg:block ">
             <SideMenu />
           </div>
-          <div className="p-4 lg:py-0 lg:px-8">{children}</div>
+          <div className="p-4 lg:py-0 lg:px-8 w-full">{children}</div>
         </main>
       </body>
     </html>
